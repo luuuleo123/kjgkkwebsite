@@ -3,52 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - KJGKK</title>
+    <title>Privacy Policy - AdOptimizer</title>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 800px; margin: 0 auto; padding: 40px 20px; line-height: 1.6; color: #333; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            line-height: 1.7; 
+            color: #333; 
+        }
         h1 { color: #FF9900; }
-        .date { color: #666; margin-bottom: 20px; }
-        h2 { margin-top: 30px; color: #232f3e; }
+        .date { color: #666; margin-bottom: 24px; font-size: 14px; }
+        h2 { 
+            margin-top: 36px; 
+            color: #232f3e; 
+            font-size: 20px;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 8px;
+        }
+        h3 {
+            margin-top: 20px;
+            color: #444;
+            font-size: 16px;
+        }
+        ul { margin: 10px 0 10px 20px; }
+        li { margin-bottom: 6px; }
+        strong { color: #232f3e; }
+        .highlight {
+            background: #fff3cd;
+            border-left: 4px solid #FF9900;
+            padding: 12px 16px;
+            margin: 16px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        a { color: #0066c0; }
+        .back { margin-top: 40px; display: inline-block; }
     </style>
 </head>
 <body>
     <h1>Privacy Policy</h1>
-    <div class="date">Last Updated: June 22, 2026</div>
+    <div class="date">Last Updated: July 9, 2026</div>
     
-    <h2>1. Information We Collect</h2>
-    <p>We collect advertising data through Amazon Ads API with your explicit OAuth authorization. This includes campaign data, keywords, bids, budgets, and performance reports.</p>
+    <h2>1. Introduction</h2>
+    <p>AdOptimizer ("we", "us", or "our") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, store, and protect your data when you use our platform. We integrate with Amazon's official APIs — <strong>Amazon Ads API</strong> and <strong>Selling Partner API (SP-API)</strong> — to provide seller automation services.</p>
     
-    <h2>2. How We Use Your Information</h2>
-    <p>Your data is used solely to provide advertising optimization services, including:</p>
+    <h2>2. Information We Collect</h2>
+    <p>We only collect data necessary to provide our services, and only with your explicit <strong>OAuth 2.0 authorization</strong>. We do not store your Amazon seller account password.</p>
+    
+    <h3>2.1 Amazon Ads API Data</h3>
     <ul>
-        <li>Automated bidding adjustments</li>
-        <li>Budget allocation optimization</li>
-        <li>Keyword management and expansion</li>
-        <li>Performance reporting and analytics</li>
+        <li>Campaign data (Sponsored Products, Brands, Display)</li>
+        <li>Keywords, bids, budgets, and targeting settings</li>
+        <li>Advertising performance metrics (impressions, clicks, conversions, ACOS, ROAS)</li>
+        <li>Advertising reports and analytics data</li>
     </ul>
     
-    <h2>3. Data Security</h2>
-    <p>All data is encrypted in transit using HTTPS (TLS 1.2+) and encrypted at rest. We implement industry-standard security measures including access controls, firewalls, and regular security audits.</p>
-    
-    <h2>4. Data Sharing</h2>
-    <p><strong>We do not share your data with any third parties.</strong> Your data is only accessible to authorized personnel within our organization for the purpose of providing our services.</p>
-    
-    <h2>5. Data Retention</h2>
-    <p>We retain your data only for as long as necessary to provide our services. You may request deletion of your data at any time.</p>
-    
-    <h2>6. Your Rights</h2>
-    <p>You have the right to:</p>
+    <h3>2.2 Selling Partner API (SP-API) Data</h3>
     <ul>
-        <li>Access your data</li>
-        <li>Request correction of inaccurate data</li>
-        <li>Request deletion of your data</li>
-        <li>Revoke OAuth authorization at any time</li>
+        <li><strong>Product Information:</strong> Product titles, descriptions, images, ASINs, SKUs, variant details, A+ content, and catalog attributes</li>
+        <li><strong>Inventory Data:</strong> FBA stock levels, in-transit quantities, storage limits, inventory health status, and warehouse locations</li>
+        <li><strong>Order Data:</strong> Order IDs, order status, shipping addresses, tracking numbers, and fulfillment details</li>
+        <li><strong>Pricing Data:</strong> Current product prices, competitor pricing information, and pricing rule configurations</li>
+        <li><strong>Business Reports:</strong> Sales reports, financial settlement reports, inventory reports, returns reports, and tax documents</li>
     </ul>
     
-    <h2>7. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy, please contact us:</p>
+    <div class="highlight">
+        <strong>Important:</strong> We do not collect or store sensitive buyer personal information such as full names, phone numbers, or email addresses. Any buyer data accessed through Orders API is used solely for order fulfillment tracking and is handled in accordance with Amazon's Data Protection Policy.
+    </div>
+    
+    <h2>3. How We Use Your Information</h2>
+    <p>Your data is used <strong>solely</strong> to provide and improve our services:</p>
+    
+    <h3>3.1 Advertising Optimization (Ads API)</h3>
+    <ul>
+        <li>Automated bidding adjustments and budget allocation</li>
+        <li>Keyword management, expansion, and negative keyword automation</li>
+        <li>Performance reporting, ACOS/ROAS tracking, and campaign analytics</li>
+    </ul>
+    
+    <h3>3.2 Seller Operations (SP-API)</h3>
+    <ul>
+        <li>Product catalog synchronization and listing quality management</li>
+        <li>Inventory monitoring, replenishment alerts, and FBA inbound planning</li>
+        <li>Order tracking, shipping status updates, and logistics coordination</li>
+        <li>Dynamic pricing adjustments based on market competition and profit margins</li>
+        <li>Automated report generation and business intelligence dashboards</li>
+    </ul>
+    
+    <h2>4. Data Security</h2>
+    <p>We implement industry-standard security measures to protect your data:</p>
+    <ul>
+        <li><strong>Encryption in Transit:</strong> All data transmitted via HTTPS using TLS 1.2+</li>
+        <li><strong>Encryption at Rest:</strong> All stored data is encrypted using AES-256</li>
+        <li><strong>Access Controls:</strong> Role-based access control (RBAC) with multi-factor authentication</li>
+        <li><strong>Network Security:</strong> Firewalls, intrusion detection, and DDoS protection</li>
+        <li><strong>Regular Audits:</strong> Security assessments and vulnerability scans</li>
+    </ul>
+    
+    <h2>5. Data Sharing</h2>
+    <p><strong>We do not sell, rent, or share your data with any third parties.</strong></p>
+    <p>Your data is only accessible to authorized personnel within our organization, strictly for the purpose of providing our services. We do not use your data for advertising, marketing, or any purpose unrelated to the services you have subscribed to.</p>
+    
+    <h2>6. Data Retention</h2>
+    <ul>
+        <li>We retain your data only for as long as necessary to provide our services</li>
+        <li>Advertising performance data is retained for up to 24 months for historical analytics</li>
+        <li>Order and inventory data is retained for up to 12 months</li>
+        <li>You may request deletion of your data at any time (see Section 8)</li>
+    </ul>
+    
+    <h2>7. Your Rights</h2>
+    <p>You have the following rights regarding your data:</p>
+    <ul>
+        <li><strong>Access:</strong> Request a copy of all data we hold about you</li>
+        <li><strong>Correction:</strong> Request correction of inaccurate or incomplete data</li>
+        <li><strong>Deletion:</strong> Request complete deletion of your data ("Right to be Forgotten")</li>
+        <li><strong>Portability:</strong> Request export of your data in a machine-readable format</li>
+        <li><strong>Revocation:</strong> Revoke OAuth authorization at any time through your Amazon Seller Central account, which will immediately cease all data access</li>
+    </ul>
+    
+    <h2>8. Data Deletion Request</h2>
+    <p>To request deletion of your data, please email us at <a href="mailto:leo@kjgkk.com">leo@kjgkk.com</a> with the subject line "Data Deletion Request". We will process your request within 30 days and confirm completion via email.</p>
+    
+    <h2>9. Compliance</h2>
+    <p>We comply with:</p>
+    <ul>
+        <li>Amazon's Data Protection Policy and Acceptable Use Policy</li>
+        <li>Amazon Ads API Terms of Use</li>
+        <li>Amazon Selling Partner API Terms of Use</li>
+        <li>General Data Protection Regulation (GDPR) where applicable</li>
+        <li>California Consumer Privacy Act (CCPA) where applicable</li>
+    </ul>
+    
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. We will notify you of any material changes via email or through our platform at least 30 days before they take effect.</p>
+    
+    <h2>11. Contact Us</h2>
+    <p>If you have any questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
     <p>Email: <a href="mailto:leo@kjgkk.com">leo@kjgkk.com</a></p>
     
-    <p><a href="index.html">← Back to Home</a></p>
+    <a href="index.html" class="back">← Back to Home</a>
 </body>
 </html>
