@@ -3,52 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AdOptimizer is an intelligent Amazon seller operations platform powered by SP-API and Amazon Ads API.">
-    <title>AdOptimizer - Amazon Seller Intelligence Platform</title>
+    <meta name="description" content="AdOptimizer by 苏州杨芸电子商务有限公司 - An intelligent Amazon seller operations platform powered by SP-API and Amazon Ads API, listed on Amazon Selling Partner Appstore.">
+    <title>AdOptimizer - Amazon Selling Partner Appstore | 苏州杨芸电子商务有限公司</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; 
             line-height: 1.6; 
             color: #333;
             background: #f5f7fa;
         }
         .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        
+
+        /* Top Bar - Company Identity */
+        .top-bar {
+            background: #131921;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 13px;
+            text-align: center;
+        }
+        .top-bar span { opacity: 0.9; }
+
         /* Header */
         header {
             background: linear-gradient(135deg, #232F3E 0%, #37475A 100%);
             color: white;
-            padding: 60px 0;
+            padding: 70px 0 60px;
             text-align: center;
         }
-        .logo { font-size: 36px; font-weight: 800; letter-spacing: 2px; margin-bottom: 10px; }
-        .tagline { font-size: 18px; color: #FF9900; font-weight: 500; }
-        
-        /* About Section */
-        .about {
-            background: white;
-            padding: 50px 0;
-            text-align: center;
+        .logo-area {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 16px;
         }
-        .about p {
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 17px;
-            color: #555;
-            line-height: 1.8;
+        .logo-icon {
+            width: 52px; height: 52px;
+            background: #FF9900;
+            border-radius: 12px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; font-weight: 800; color: #232F3E;
         }
-        
-        /* Features Grid */
-        .features {
-            padding: 60px 0;
+        .logo-text { text-align: left; }
+        .logo { font-size: 38px; font-weight: 800; letter-spacing: 1px; line-height: 1.1; }
+        .company-name {
+            font-size: 14px;
+            color: #FF9900;
+            margin-top: 4px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
         }
+        .tagline { 
+            font-size: 20px; 
+            color: #ddd; 
+            font-weight: 400;
+            margin-top: 12px;
+        }
+        .appstore-badge {
+            display: inline-block;
+            margin-top: 28px;
+            background: #FF9900;
+            color: #232F3E;
+            padding: 14px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .appstore-badge:hover {
+            background: #e68a00;
+            transform: translateY(-2px);
+        }
+        .launch-note {
+            margin-top: 12px;
+            font-size: 13px;
+            color: #aaa;
+        }
+
+        /* Section Common */
+        section { padding: 60px 0; }
         .section-title {
             text-align: center;
-            font-size: 28px;
+            font-size: 30px;
             color: #232F3E;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 16px;
             margin-bottom: 40px;
         }
+
+        /* About / Company */
+        .about {
+            background: white;
+            text-align: center;
+        }
+        .about-box {
+            max-width: 760px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 1px solid #e0e0e0;
+            border-radius: 16px;
+            background: #fafbfc;
+        }
+        .about-box h2 {
+            color: #232F3E;
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+        .about-box p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+        .about-box .legal-name {
+            display: inline-block;
+            background: #232F3E;
+            color: #FF9900;
+            padding: 6px 18px;
+            border-radius: 6px;
+            font-size: 15px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        /* Features Grid */
+        .features { background: #f5f7fa; }
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -60,20 +147,17 @@
             padding: 32px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.06);
             transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #eee;
         }
         .card:hover {
             transform: translateY(-4px);
             box-shadow: 0 8px 24px rgba(0,0,0,0.1);
         }
         .card-icon {
-            width: 56px;
-            height: 56px;
+            width: 56px; height: 56px;
             border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 28px;
-            margin-bottom: 16px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; margin-bottom: 16px;
         }
         .card:nth-child(1) .card-icon { background: #E8F4FD; }
         .card:nth-child(2) .card-icon { background: #FFF3E0; }
@@ -81,13 +165,14 @@
         .card:nth-child(4) .card-icon { background: #FCE4EC; }
         .card:nth-child(5) .card-icon { background: #F3E5F5; }
         .card h3 {
-            font-size: 20px;
+            font-size: 19px;
             color: #232F3E;
-            margin-bottom: 12px;
+            margin-bottom: 10px;
+            font-weight: 700;
         }
         .card p {
-            color: #666;
-            font-size: 15px;
+            color: #555;
+            font-size: 14.5px;
             line-height: 1.7;
         }
         .api-tag {
@@ -97,16 +182,13 @@
             padding: 3px 10px;
             border-radius: 4px;
             font-size: 11px;
-            font-weight: 600;
-            margin-top: 12px;
+            font-weight: 700;
+            margin-top: 14px;
             letter-spacing: 0.5px;
         }
-        
+
         /* Ads Section */
-        .ads-section {
-            background: white;
-            padding: 60px 0;
-        }
+        .ads-section { background: white; }
         .ads-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -116,122 +198,415 @@
         .ads-card {
             background: #f9f9f9;
             border-radius: 10px;
-            padding: 24px;
+            padding: 28px 24px;
             text-align: center;
             border-left: 4px solid #FF9900;
+            transition: transform 0.2s;
         }
+        .ads-card:hover { transform: translateY(-3px); }
         .ads-card h4 {
             color: #232F3E;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             font-size: 16px;
+            font-weight: 700;
         }
         .ads-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Pricing Section */
+        .pricing { background: #f5f7fa; }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+        .pricing-card {
+            background: white;
+            border-radius: 16px;
+            padding: 36px 28px;
+            text-align: center;
+            border: 2px solid #e0e0e0;
+            position: relative;
+            transition: all 0.2s;
+        }
+        .pricing-card:hover {
+            border-color: #FF9900;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+        }
+        .pricing-card.featured {
+            border-color: #FF9900;
+            box-shadow: 0 8px 24px rgba(255,153,0,0.15);
+        }
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #FF9900;
+            color: #232F3E;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+        }
+        .pricing-card h3 {
+            font-size: 20px;
+            color: #232F3E;
+            margin-bottom: 8px;
+        }
+        .price {
+            font-size: 42px;
+            font-weight: 800;
+            color: #232F3E;
+            margin: 16px 0;
+        }
+        .price span {
+            font-size: 16px;
+            color: #888;
+            font-weight: 400;
+        }
+        .pricing-card ul {
+            list-style: none;
+            text-align: left;
+            margin: 24px 0;
+            padding: 0;
+        }
+        .pricing-card ul li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 14px;
+            color: #555;
+        }
+        .pricing-card ul li:last-child { border-bottom: none; }
+        .pricing-card ul li::before {
+            content: "✓";
+            color: #FF9900;
+            font-weight: 700;
+            margin-right: 8px;
+        }
+        .pricing-note {
+            text-align: center;
+            margin-top: 30px;
             color: #777;
             font-size: 14px;
         }
-        
+
+        /* Appstore Preview */
+        .appstore-preview {
+            background: linear-gradient(135deg, #232F3E 0%, #131921 100%);
+            color: white;
+            text-align: center;
+            padding: 70px 0;
+        }
+        .appstore-preview h2 {
+            font-size: 28px;
+            margin-bottom: 16px;
+        }
+        .appstore-preview p {
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 28px;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+        .appstore-btn {
+            display: inline-block;
+            background: #FF9900;
+            color: #232F3E;
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .appstore-btn:hover {
+            background: #e68a00;
+            transform: translateY(-2px);
+        }
+        .app-meta {
+            margin-top: 24px;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            flex-wrap: wrap;
+            font-size: 14px;
+            color: #999;
+        }
+        .app-meta span { display: flex; align-items: center; gap: 6px; }
+
         /* Footer */
         footer {
-            background: #232F3E;
+            background: #131921;
             color: #ccc;
-            padding: 40px 0;
-            text-align: center;
+            padding: 50px 0 30px;
         }
-        footer a { color: #FF9900; text-decoration: none; }
-        footer a:hover { text-decoration: underline; }
-        .footer-links { margin-bottom: 16px; }
-        .footer-links a { margin: 0 12px; font-size: 14px; }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 32px;
+            margin-bottom: 32px;
+        }
+        .footer-col h4 {
+            color: #FF9900;
+            font-size: 14px;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .footer-col p, .footer-col a {
+            color: #aaa;
+            font-size: 14px;
+            line-height: 1.8;
+            text-decoration: none;
+            display: block;
+        }
+        .footer-col a:hover { color: #FF9900; text-decoration: underline; }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 24px;
+            text-align: center;
+            font-size: 13px;
+            color: #777;
+        }
+        .footer-bottom strong { color: #ccc; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .logo { font-size: 28px; }
+            .company-name { font-size: 12px; }
+            .section-title { font-size: 24px; }
+            .price { font-size: 32px; }
+        }
     </style>
+<base target="_blank">
 </head>
 <body>
 
+<!-- Company Identity Bar -->
+<div class="top-bar">
+    <div class="container">
+        <span>📍 苏州杨芸电子商务有限公司 · Suzhou Yangyun E-Commerce Co., Ltd.</span>
+    </div>
+</div>
+
+<!-- Header -->
 <header>
     <div class="container">
-        <div class="logo">AdOptimizer</div>
+        <div class="logo-area">
+            <div class="logo-icon">A</div>
+            <div class="logo-text">
+                <div class="logo">AdOptimizer</div>
+                <div class="company-name">by 苏州杨芸电子商务有限公司</div>
+            </div>
+        </div>
         <div class="tagline">Intelligent Amazon Seller Operations Platform</div>
+        <div class="tagline" style="font-size: 16px; margin-top: 8px; color: #bbb;">Powered by Amazon SP-API & Amazon Ads API</div>
+        <a href="https://sellercentral.amazon.com/selling-partner-appstore" class="appstore-badge" target="_blank">📦 View on Selling Partner Appstore</a>
+        <p class="launch-note">Listing submitted · Available for installation within 90 days of SP-API access approval</p>
     </div>
 </header>
 
+<!-- About / Company Profile -->
 <section class="about">
     <div class="container">
-        <p>
-            AdOptimizer integrates with official Amazon APIs — <strong>SP-API</strong> and 
-            <strong>Amazon Ads API</strong> — to automate seller operations across product management, 
-            inventory, orders, pricing, advertising, and business intelligence.
-        </p>
+        <div class="about-box">
+            <h2>About AdOptimizer</h2>
+            <p>
+                AdOptimizer is a public solution provider application developed and operated by 
+                <strong>苏州杨芸电子商务有限公司 (Suzhou Yangyun E-Commerce Co., Ltd.)</strong>. 
+                The platform is built exclusively for Amazon Selling Partners, integrating official 
+                <strong>Amazon Selling Partner API (SP-API)</strong> and <strong>Amazon Ads API</strong> 
+                to deliver automated operations across product management, inventory monitoring, 
+                order fulfillment, pricing strategy, advertising optimization, and business analytics.
+            </p>
+            <p style="margin-top: 16px;">
+                Our mission is to help Amazon sellers reduce manual workload, improve advertising ROI, 
+                and make data-driven decisions through secure, compliant API-based automation.
+            </p>
+            <div class="legal-name">苏州杨芸电子商务有限公司</div>
+        </div>
     </div>
 </section>
 
+<!-- SP-API Features -->
 <section class="features">
     <div class="container">
         <h2 class="section-title">SP-API Powered Operations</h2>
+        <p class="section-subtitle">Core features aligned with requested SP-API roles</p>
         <div class="grid">
             <div class="card">
                 <div class="card-icon">📦</div>
                 <h3>Product Information Management</h3>
-                <p>Via Catalog Items API and Listings API, batch retrieve and update product details, A+ content, images, and variant information to ensure accuracy and consistency.</p>
-                <span class="api-tag">SP-API</span>
+                <p>Via Catalog Items API and Listings API, batch retrieve and update product details, A+ content, images, and variant information. Ensure listing accuracy and consistency across all SKUs.</p>
+                <span class="api-tag">SP-API · Catalog & Listings</span>
             </div>
             <div class="card">
                 <div class="card-icon">📊</div>
                 <h3>Intelligent Inventory Monitoring</h3>
-                <p>Via FBA Inventory API and Fulfillment Inbound API, monitor real-time stock levels, in-transit quantities, and storage limits. Auto-trigger restock reminders to prevent stockouts.</p>
-                <span class="api-tag">SP-API</span>
+                <p>Via FBA Inventory API and Fulfillment Inbound API, monitor real-time stock levels, in-transit quantities, and storage limits. Auto-trigger restock alerts to prevent stockouts and overage fees.</p>
+                <span class="api-tag">SP-API · Inventory & FBA</span>
             </div>
             <div class="card">
                 <div class="card-icon">🚚</div>
                 <h3>Order & Logistics Tracking</h3>
-                <p>Via Orders API, retrieve order details, shipping status, and logistics tracking in real time. Auto-generate shipping notifications and after-sales follow-ups.</p>
-                <span class="api-tag">SP-API</span>
+                <p>Via Orders API, retrieve order details, shipping status, and logistics tracking in real time. Auto-generate shipping notifications and after-sales follow-up workflows.</p>
+                <span class="api-tag">SP-API · Orders & Shipping</span>
             </div>
             <div class="card">
                 <div class="card-icon">💰</div>
                 <h3>Dynamic Pricing Strategy</h3>
-                <p>Via Product Pricing API, track competitor prices and market trends continuously. Adjust prices automatically based on preset rules to maintain competitiveness.</p>
-                <span class="api-tag">SP-API</span>
+                <p>Via Product Pricing API, track competitor prices and market trends continuously. Adjust prices automatically based on preset rules to maintain Buy Box competitiveness and profit margins.</p>
+                <span class="api-tag">SP-API · Pricing</span>
             </div>
             <div class="card">
                 <div class="card-icon">📈</div>
                 <h3>Operations Data Analytics</h3>
-                <p>Via Reports API, schedule downloads of sales, inventory, and financial reports. Generate interactive dashboards to support data-driven decision making.</p>
-                <span class="api-tag">SP-API</span>
+                <p>Via Reports API, schedule automated downloads of sales, inventory, and financial reports. Generate interactive dashboards to support data-driven inventory and pricing decisions.</p>
+                <span class="api-tag">SP-API · Reports & Analytics</span>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Amazon Ads API -->
 <section class="ads-section">
     <div class="container">
         <h2 class="section-title">Amazon Ads API Solutions</h2>
+        <p class="section-subtitle">Advertising automation and performance intelligence</p>
         <div class="ads-grid">
             <div class="ads-card">
                 <h4>Automated Bid Management</h4>
-                <p>AI-driven bid adjustments for Sponsored Products, Brands, and Display</p>
+                <p>AI-driven bid adjustments for Sponsored Products, Sponsored Brands, and Sponsored Display campaigns based on ACOS and conversion targets.</p>
             </div>
             <div class="ads-card">
                 <h4>Budget Optimization</h4>
-                <p>Smart budget allocation across campaigns and time periods</p>
+                <p>Smart daily budget allocation across campaigns, ad groups, and time periods to maximize impression share during peak conversion windows.</p>
             </div>
             <div class="ads-card">
                 <h4>Keyword Intelligence</h4>
-                <p>Auto-discovery of high-converting keywords and negative keyword automation</p>
+                <p>Auto-discovery of high-converting search terms, automated negative keyword harvesting, and search term report analysis to reduce wasted ad spend.</p>
             </div>
             <div class="ads-card">
                 <h4>Performance Analytics</h4>
-                <p>Real-time ACOS, TACOS, and ROAS tracking with custom dashboards</p>
+                <p>Real-time ACOS, TACOS, and ROAS tracking with custom dashboards. Campaign-level and SKU-level profitability analysis.</p>
             </div>
         </div>
     </div>
 </section>
 
+<!-- Pricing -->
+<section class="pricing">
+    <div class="container">
+        <h2 class="section-title">Transparent Pricing</h2>
+        <p class="section-subtitle">No hidden fees. Choose the plan that fits your business size.</p>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <h3>Starter</h3>
+                <div class="price">$0<span>/month</span></div>
+                <p style="color: #888; font-size: 14px;">For new sellers getting started</p>
+                <ul>
+                    <li>Up to 1,000 SKUs monitored</li>
+                    <li>Basic inventory alerts</li>
+                    <li>Standard sales reports</li>
+                    <li>Email support</li>
+                    <li>SP-API data sync (daily)</li>
+                </ul>
+                <p style="font-size: 12px; color: #999; margin-top: 12px;">Related service fees may apply for premium report storage.</p>
+            </div>
+            <div class="pricing-card featured">
+                <div class="pricing-badge">MOST POPULAR</div>
+                <h3>Professional</h3>
+                <div class="price">$49<span>/month</span></div>
+                <p style="color: #888; font-size: 14px;">For growing sellers with active ads</p>
+                <ul>
+                    <li>Unlimited SKU monitoring</li>
+                    <li>Advanced inventory forecasting</li>
+                    <li>Amazon Ads API integration</li>
+                    <li>Automated bid rules (5 campaigns)</li>
+                    <li>Priority email support</li>
+                    <li>SP-API data sync (hourly)</li>
+                </ul>
+            </div>
+            <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <div class="price">Custom</div>
+                <p style="color: #888; font-size: 14px;">For high-volume sellers & agencies</p>
+                <ul>
+                    <li>Everything in Professional</li>
+                    <li>Unlimited automated campaigns</li>
+                    <li>Custom analytics dashboards</li>
+                    <li>Dedicated account manager</li>
+                    <li>API webhook access</li>
+                    <li>White-label reporting</li>
+                </ul>
+                <p style="font-size: 12px; color: #999; margin-top: 12px;"><a href="mailto:leo@kjgkk.com" style="color: #FF9900;">Contact us</a> for a custom quote.</p>
+            </div>
+        </div>
+        <p class="pricing-note">
+            🔒 All plans require active Amazon Seller Central account authorization. A one-time onboarding fee of $29 may apply for SP-API setup assistance.
+        </p>
+    </div>
+</section>
+
+<!-- Appstore Preview -->
+<section class="appstore-preview">
+    <div class="container">
+        <h2>Coming to Amazon Selling Partner Appstore</h2>
+        <p>
+            AdOptimizer has submitted its listing to the Amazon Selling Partner Appstore. 
+            Once SP-API access is fully approved, sellers can install the app directly from Seller Central 
+            with one-click OAuth authorization — no technical setup required.
+        </p>
+        <a href="https://sellercentral.amazon.com/selling-partner-appstore" class="appstore-btn" target="_blank">Browse the Appstore</a>
+        <div class="app-meta">
+            <span>🏢 苏州杨芸电子商务有限公司</span>
+            <span>🔌 SP-API + Ads API</span>
+            <span>🌐 Web-based SaaS</span>
+            <span>🛡️ OAuth 2.0 Secure Auth</span>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
 <footer>
     <div class="container">
-        <div class="footer-links">
-            <a href="privacy-policy.html">Privacy Policy</a>
-            <a href="terms-of-service.html">Terms of Service</a>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <p><strong style="color: #fff;">苏州杨芸电子商务有限公司</strong></p>
+                <p>Suzhou Yangyun E-Commerce Co., Ltd.</p>
+                <p style="margin-top: 8px;">A registered Amazon Public Solution Provider.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Product</h4>
+                <a href="#features">SP-API Operations</a>
+                <a href="#ads">Amazon Ads API</a>
+                <a href="#pricing">Pricing Plans</a>
+                <a href="https://sellercentral.amazon.com/selling-partner-appstore" target="_blank">Appstore Listing</a>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms-of-service.html">Terms of Service</a>
+                <a href="acceptable-use.html">Acceptable Use Policy</a>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Email: <a href="mailto:leo@kjgkk.com">leo@kjgkk.com</a></p>
+                <p>Website: <a href="https://kjgkk.com" target="_blank">kjgkk.com</a></p>
+                <p style="margin-top: 8px; font-size: 12px; color: #777;">Business inquiries welcome.</p>
+            </div>
         </div>
-        <p>Email: <a href="mailto:leo@kjgkk.com">leo@kjgkk.com</a></p>
-        <p style="margin-top: 12px; font-size: 13px; color: #888;">© 2026 AdOptimizer. All rights reserved.</p>
+        <div class="footer-bottom">
+            <p>© 2026 <strong>苏州杨芸电子商务有限公司</strong> (Suzhou Yangyun E-Commerce Co., Ltd.). All rights reserved.</p>
+            <p style="margin-top: 6px; font-size: 12px;">AdOptimizer™ is a trademark of 苏州杨芸电子商务有限公司. Amazon and Selling Partner API are trademarks of Amazon.com, Inc.</p>
+        </div>
     </div>
 </footer>
 
